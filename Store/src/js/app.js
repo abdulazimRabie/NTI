@@ -1,12 +1,11 @@
 import Products from "./Products.js";
 import Shopping from "./Shopping.js";
 
-const pagesEle = document.getElementById('pages');
-
 const products = new Products();
 const orders = new Shopping();
 
-function activePage() {
+function activePagenation() {
+  const pagesEle = document.getElementById('pages');;
   pagesEle.addEventListener('click', (event) => {
     const pageNumber = event.target.textContent;
     Products.page = +pageNumber;
@@ -20,7 +19,7 @@ function init() {
     .then(_ => products.showProdcuts(Products.page))
     .then(_ => products.activePagenation())
     .then(_ => products.getCategories())
-    .then(_ => activePage())
+    .then(_ => activePagenation())
     .then(_ => applyFilter())
     .then(_ => addOrder())
     .then(_ => sortProductByPrice())
@@ -92,5 +91,5 @@ function addOrder() {
   })
 }
 
-filterActions();
 init();
+filterActions();
