@@ -1,6 +1,9 @@
 # Store
 Building Store using API - Applaying filters on products 
 
+# Screenshots
+<img src="./store.png">
+
 # installation
 `
 npm install
