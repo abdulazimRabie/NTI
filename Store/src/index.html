@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/output.css">
+  <title>Store</title>
+</head>
+<body>
+  <div class="p-1 md:p-5 grid justify-center">
+    <div class="container">
+      <h1 class="text-center text-5xl font-extrabold">My Store</h1>
+    
+      <!-- Filters inputs -->
+      <div class="p-5 grid gap-y-8 justify-items-center">
+        <div class="flex items-center justify-around">
+    
+          <div class="flex flex-wrap gap-3">
+            <!-- search -->
+            <input type="text" placeholder="Search product" class="input input-bordered input-md w-full max-w-xs" id="searchInput"/>
+      
+            <!-- category -->
+            <select class="select select-bordered select-md w-full max-w-xs" id="categories">
+              <!-- <option disabled selected>Small</option>
+              <option>Small Apple</option>
+              <option>Small Orange</option>
+              <option>Small Tomato</option> -->
+            </select>
+      
+            <!-- min price -->
+            <input type="number" placeholder="min price" class="input input-bordered input-md w-full max-w-xs"  id="minPrice"/>
+      
+            <!-- max price -->
+            <input type="number" placeholder="max price" class="input input-bordered input-md w-full max-w-xs" id="maxPrice"/>
+          </div>
+    
+          <!-- aplly filter -->
+          <button class="btn btn-success block" id="applyFilter">Apply Filter</button>
+        </div>
+
+        <!-- sort by price -->
+        <select class="select select-bordered select-sm w-full max-w-xs" id="sortPrice">
+          <option disabled selected value="null">sort by price</option>
+          <option>Lowest</option>
+          <option>Highest</option>
+        </select>
+
+        <!-- shopping card -->
+        <div id="shoppingcard">
+          <h4>shopping cart</h4>
+          <div id="orders"></div>
+          <div>total quantity : <span id="shopping_total_quantity"></span></div>
+          <div>total quantity : <span id="shopping_total_price"></span></div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <!-- Products Wrapper -->
+    <div class="container flex flex-wrap justify-around gap-8" id="productsWrapper">
+    
+    </div>
+    
+    <div class="container grid place-content-center">
+      <div class="join" id="pages">
+        <!-- <button class="join-item btn">1</button>
+        <button class="join-item btn">2</button>
+        <button class="join-item btn">3</button>
+        <button class="join-item btn">4</button> -->
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="./js/app.js" type="module"></script>
+</body>
+</html>
