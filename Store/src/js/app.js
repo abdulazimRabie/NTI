@@ -80,7 +80,6 @@ function addOrder() {
   const addOrderBtns = document.querySelectorAll('.addToCard');
   addOrderBtns.forEach(button => {
     button.onclick = function () {
-      console.log('add to card'); 
       const id = button.getAttribute('data-id');
       const clickedOrder = products.productsList.find((e) => {
         return e.id == id;

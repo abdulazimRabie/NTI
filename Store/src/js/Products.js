@@ -22,7 +22,6 @@ export default class Products{
       const data = await response.json();
       this.productsList = data;
       this.filterdProductsList = data;
-      console.log(data);
     }
     catch (error) {
       console.log(error);
@@ -56,8 +55,6 @@ export default class Products{
 
       container.insertAdjacentHTML('beforeend', html);
     }
-
-    console.log(`iam showing products from page ${pageNumber}`);
   }
 
   getCategories() {
@@ -122,9 +119,6 @@ export default class Products{
   }
 
   applyFilter() {
-    
-    console.log(this.filters);
-
     this.filterdProductsList = this.productsList;
     
     this.#searchOnProdcut()
@@ -139,7 +133,6 @@ export default class Products{
   activePagenation() {
     const numberOfPages = this.filterdProductsList.length <= 4 ? 1 : Math.ceil(this.filterdProductsList.length / 4);
     const pagesEle = document.getElementById('pages');
-    console.log('pages now must be', numberOfPages);
     pagesEle.innerHTML = '';
 
     for(let i = 1; i <= numberOfPages; i++) {

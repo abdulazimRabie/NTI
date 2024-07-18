@@ -7,7 +7,6 @@ export default class Shopping{
   }
 
   add(product) {
-    console.log('addig order');
     this.quantity++;
     this.totalPrice += product.price;
 
@@ -39,8 +38,6 @@ export default class Shopping{
 
     ordersEle.innerHTML = '';
 
-    console.log(this.orders);
-    console.log();
     for(let order of this.orders.values()  ) {
       let html = `
         <div class='p-2 border-red-100 border rounded-md m-2'>${order.name} (${order.price}) (${order.count})</div>
